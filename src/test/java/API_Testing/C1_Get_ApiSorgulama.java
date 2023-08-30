@@ -20,19 +20,13 @@ public class C1_Get_ApiSorgulama {
 
     @Test
     public void get01(){
-        // 1- Url girilip url`e gidelecek
-        String url = "https://restful-booker.herokuapp.com/booking/83";
-        Response response = given().when().get(url);
-        response.prettyPrint();
-
+        // 1-URL belirlenip url'e gidilecek
+        String url="https://restful-booker.herokuapp.com/booking/83";
         // 2- Expected data belirlenecek
-
-
-        // 3- Actual Data belirlenecek
-
-
-        // 4- Assertion islemi yapilacak
-
+        // 3-Actual Data alınacak
+        Response response=given().when().get(url);
+        // 4-Response yazdırdık
+        response.prettyPrint();
 
     }
 }
