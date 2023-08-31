@@ -1,4 +1,4 @@
-package API_Testing;
+package API_Testing.Day01;
 
 import io.restassured.response.Response;
 import org.junit.Test;
