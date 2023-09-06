@@ -4,7 +4,7 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeTest;
 
-public class baseUrl_JSONHolder {
+public class BaseUrl_JSONHolder {
 
     // BaseUrl olustururken
 

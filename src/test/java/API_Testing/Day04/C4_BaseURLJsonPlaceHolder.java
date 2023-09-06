@@ -1,15 +1,14 @@
 package API_Testing.Day04;
 
-import baseUrlPackage.baseUrl_JSONHolder;
+import baseUrlPackage.BaseUrl_JSONHolder;
 import io.restassured.response.Response;
 
-import org.hamcrest.Matcher;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
-public class C4_BaseURLJsonPlaceHolder extends baseUrl_JSONHolder {
+public class C4_BaseURLJsonPlaceHolder extends BaseUrl_JSONHolder {
  /*
    Class icinde 3 Test metodu olusturun ve asagidaki testleri yapin
    1- https://jsonplaceholder.typicode.com/posts endpointine bir GET request
