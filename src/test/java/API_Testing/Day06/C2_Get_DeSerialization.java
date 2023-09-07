@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertEquals;
 
 public class C2_Get_DeSerialization extends BaseUrl_Dummy {
 /*
@@ -45,17 +46,17 @@ public class C2_Get_DeSerialization extends BaseUrl_Dummy {
         HashMap<String,Object> resMap = response.as(HashMap.class);
 
         // 4- Assertion
-        Assert.assertEquals(dummyData.statusCode,response.getStatusCode());
-        Assert.assertEquals(dummyData.contentType,response.getContentType());
+        assertEquals(dummyData.statusCode,response.getStatusCode());
+        assertEquals(dummyData.contentType,response.getContentType());
 
-        Assert.assertEquals(expData.get("status"),resMap.get("status"));
-        Assert.assertEquals(expData.get("message"),resMap.get("message"));
+        assertEquals(expData.get("status"),resMap.get("status"));
+        assertEquals(expData.get("message"),resMap.get("message"));
 
-        Assert.assertEquals(((Map)(expData.get("data"))).get("id"),resMap.get("data.id"));
-        Assert.assertEquals(((Map)(expData.get("data"))).get("employee_name"),resMap.get("data.employee_name"));
-        Assert.assertEquals(((Map)(expData.get("data"))).get("employee_salary"),resMap.get("data.employee_salary"));
-        Assert.assertEquals(((Map)(expData.get("data"))).get("employee_age"),resMap.get("data.employee_age"));
-        Assert.assertEquals(((Map)(expData.get("data"))).get("profile_image"),resMap.get("data.profile_image"));
+        assertEquals(((Map)(expData.get("data"))).get("id"),((Map)(resMap.get("data"))).get("id"));
+        assertEquals(((Map)(expData.get("data"))).get("employee_name"),((Map)(resMap.get("data"))).get("employee_name"));
+        assertEquals(((Map)(expData.get("data"))).get("employee_salary"),((Map)(resMap.get("data"))).get("employee_salary"));
+        assertEquals(((Map)(expData.get("data"))).get("employee_age"),((Map)(resMap.get("data"))).get("employee_age"));
+        assertEquals(((Map)(expData.get("data"))).get("profile_image"),((Map)(resMap.get("data"))).get("profile_image"));
 
 
 

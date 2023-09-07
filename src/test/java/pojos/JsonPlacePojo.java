@@ -17,6 +17,7 @@ public class JsonPlacePojo {
     private int userId;
     private int id;
 
+    // 2- Get and Set olusturduk
     public String getTitle() {
         return title;
     }
@@ -48,4 +49,31 @@ public class JsonPlacePojo {
     public void setId(int id) {
         this.id = id;
     }
+
+    // 3- Parametreli Constructor olusturduk
+    public JsonPlacePojo(String title, String body, int userId, int id) {
+        this.title = title;
+        this.body = body;
+        this.userId = userId;
+        this.id = id;
+    }
+
+    // 4- Parametresiz Constructor olusturduk
+    public JsonPlacePojo() {
+
+    }
+
+    // 5) toString() metodu olusturalim
+
+
+    @Override
+    public String toString() {
+        return "JsonPlacePojo{" +
+                "title='" + title + '\'' +
+                ", body='" + body + '\'' +
+                ", userId=" + userId +
+                ", id=" + id +
+                '}';
+    }
 }
+
